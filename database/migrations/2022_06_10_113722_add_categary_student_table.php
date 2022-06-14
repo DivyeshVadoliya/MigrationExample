@@ -15,7 +15,8 @@ class AddCategaryStudentTable extends Migration
     {
         Schema::table('student', function (Blueprint $table) {
             //
-            $table->string('categary');
+           // $table->string('categary');
+            $table->string('marks');
         });
     }
 
@@ -28,7 +29,8 @@ class AddCategaryStudentTable extends Migration
     {
         Schema::table('student', function (Blueprint $table) {
             //
-             $table->dropColumn('categary');
+           //  $table->dropColumn('categary');
+            $table->dropColumn('marks');
         });
     }
 }

@@ -17,12 +17,13 @@ class CreateStudentTable extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->id();
-            $table->string('class');
+          //  $table->string('class');
            $table->string('name',30);//30 character string define
             $table->string('email',30);
-            $table->string('rollno');//only number define
-            $table->string('gender',10);
-            $table->string('phonenumber');
+          //  $table->string('rollno');//only number define
+          //  $table->string('gender',10);
+            $table->set('gender',['Male','Female']);
+            //$table->string('phonenumber');
             $table->string('address',100);
             $table->timestamps();
         });
