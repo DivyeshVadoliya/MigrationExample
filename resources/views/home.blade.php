@@ -4,6 +4,12 @@
      <!-- CSS only -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   {{-- <style>
+        body > div > div > div.col-sm-7 > nav > div.hidden.sm\:flex-1.sm\:flex.sm\:items-center.sm\:justify-between > div:nth-child(2)
+            {
+                display: none;
+            }
+    </style>--}}
     <title>Student</title>
    
 </head>
@@ -35,7 +41,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="address">Address:</label>
-                        <textarea class="form-control" rows="3" id="address" name="address"></textarea>
+                        <textarea class="form-control" rows="2" id="address" name="address"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="marks">Marks</label>
@@ -82,7 +88,7 @@
                         @endforeach
                     </tbody>
                 </table>
-
+                 {{$student->links()}}
             </div>
 
         </div>

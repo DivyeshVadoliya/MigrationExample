@@ -15,7 +15,8 @@ class StudentController extends Controller
     public function index()
     {
         //
-        $student=DB::table('student')->get();
+       // $student=DB::table('student')->get();
+        $student=DB::table('student')->paginate(4);
         return view('home',['student'=>$student]);
     }
 
@@ -85,6 +86,7 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //dd($request);
         DB::table('student')->where('id' , $id)->update([
                 'name'=>$request->name,
                 'email'=>$request->email,

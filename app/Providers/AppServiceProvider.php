@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-//use Illuminate\Support\Facades\Schema;///add this  file for migration
+use Illuminate\Support\Facades\Schema;///add this  file for migration
+use Illuminate\Pagination\Paginator;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-       // Schema::defaultStringLength(191); // add this file for migration
+        Schema::defaultStringLength(191); // add this file for migration
+        Paginator::useBootstrap();//using pagination in bootstrap
     }
 }

@@ -21,16 +21,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">email</label>
-                        <input type="email" class="form-control" id="email" name="email" value="{{$student->email}}">
+                        <input type="email" class="form-control" id="email" name="email" value="{{$student->email}}" >
                     </div>
                     <div class="mb-3">
                          <label for="gender" class="form-label"value="{{$student->gender}}">Gender</label>
                         <div class="form-check">
-                             <input type="radio" class="form-check-input" id="radio1" name="gender" value="male" checked>
+                             <input type="radio" class="form-check-input" id="radio1" name="gender" value="male" {{ $student->gender == 'Male' ? 'checked' : '' }}>
                                 <label class="form-check-label" for="radio1">Male</label>
                          </div>
                          <div class="form-check">
-                              <input type="radio" class="form-check-input" id="radio2" name="gender" value="female">
+                              <input type="radio" class="form-check-input" id="radio2" name="gender" value="female" {{ $student->gender == 'Female' ? 'checked' : '' }}>
                                   <label class="form-check-label" for="radio2">Female</label>
                          </div>  
                     </div>
